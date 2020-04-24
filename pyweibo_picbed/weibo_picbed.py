@@ -114,8 +114,8 @@ def get_html_type_img_url(img_url):
     return r'<img src="{}"/>'.format(img_url)
 
 
-def get_markdown_type_img_url(img_url):
-    return r'![img]({})'.format(img_url)
+def get_markdown_type_img_url(img_url, img_name='img'):
+    return r'![{}]({})'.format(img_name, img_url)
 
 
 if __name__=='__main__':

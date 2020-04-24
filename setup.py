@@ -19,12 +19,12 @@ except ImportError:
                 for (folder, _, fils) in os.walk(where)
                 if "__init__.py" in fils]
 
-with open("README.rst", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name='pyweibo_picbed',                              # 项目名称
-    version="0.1.0",                                    # 项目版本号
+    version="0.3.0",                                    # 项目版本号
     description=(                                       # 项目的简单描述
         'python implement of weibo picture bed.'
     ),
