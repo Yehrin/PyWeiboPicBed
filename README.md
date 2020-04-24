@@ -35,7 +35,6 @@ if state:       # 截图成功
 else:           # 获得错误信息
     print("error: %s" % msg)
 '''
-<img src="http://ww2.sinaimg.cn/large/aac28c44gy1ge5bq4tzzej20u00l4aei.jpg"/>'
 <img src="http://wx3.sinaimg.cn/large/aac28c44gy1ge5c1yqu4cj20u00l4q3c.j
 pg"/>
 ![img](http://wx3.sinaimg.cn/large/aac28c44gy1ge5c1yqu4cj20u00l4q3c.jpg)
