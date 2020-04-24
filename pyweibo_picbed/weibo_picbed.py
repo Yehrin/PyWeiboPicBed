@@ -87,7 +87,7 @@ def upload_screenshot_to_weibo():
     if not is_weibo_login(weibo_cookies):
         return False, 'not logged in!'
     
-    image_url = 'https://picupload.weibo.com/interface/pic_upload.php?ori=1&mime=image%2Fjpeg&data=base64&url=0&markpos=1&logo=&nick=0&marks=1&app=miniblog'
+    weibo_api_url = 'https://picupload.weibo.com/interface/pic_upload.php?ori=1&mime=image%2Fjpeg&data=base64&url=0&markpos=1&logo=&nick=0&marks=1&app=miniblog'
 
     img_base64 = get_img_base64_from_clipboard()
     if img_base64 is None:
@@ -99,7 +99,7 @@ def upload_screenshot_to_weibo():
     }
 
     try:
-        response = requests.post(image_url, data=data, cookies=weibo_cookies)
+        response = requests.post(weibo_api_url, data=data, cookies=weibo_cookies)
         image_id = re.findall('"pid":"(.*)"', response.text)[0]
         zones = ['wx{}'.format(i) for i in range(1, 5)] + \
                 ['ww{}'.format(i) for i in range(1, 5)]
