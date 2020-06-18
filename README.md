@@ -4,6 +4,12 @@
 
 
 ## 安装
+先安装相关依赖:
+```
+pip install --upgrade --force-reinstall PyObjC PyObjC-core
+```
+然后安装本模块:
+
 ```
 pip install pyweibo-picbed
 ```
